@@ -1,0 +1,11 @@
+question,contexts,answer,ground_truth,retrieval_ms,generation_ms
+To whom did the Virgin Mary allegedly appear in 1858 in Lourdes France?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",Saint Bernadette Soubirous,10.702100000344217,797.7877000230365
+What is in front of the Notre Dame Main Building?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",a copper statue of Christ,28.419199981726706,1564.623299986124
+When did the Scholastic Magazine of Notre dame begin publishing?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",September 1876,21.918500016909093,629.610900010448
+The granting of Doctorate degrees first occurred in what year at Notre Dame?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",1924,19.783600000664592,1144.308999995701
+The Lobund Institute was merged into the Department of Biology at Notre Dame in what year?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",1958,24.26689997082576,762.7535000210628
+When did the first art gallery open in Washington state?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",1927,11.410400038585067,946.4144999510609
+On what type of transportation system has Seattle begun to focus?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",mass transit,6.152399990241975,588.5479000280611
+What can cause your memory to deterioriate or not work as well?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",Stress,18.221399979665875,1603.3096999744885
+In studies what is a relationship between sleeping and learning?,['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",activation patterns in the sleeping brain that mirror those recorded during the learning of tasks from the previous day,7.079000002704561,1102.2414999897592
+"In the 1990s, what type of programming changed the handling of databases?",['No context retrieved.'],"I'm sorry, I couldn't find that in the database.",object-oriented,20.868699997663498,639.8260000278242
