@@ -1,0 +1,303 @@
+Total failed rows where ground_truth is ACTUALLY present in retrieved context: 21
+
+======================================================================
+Row 3: Q: The granting of Doctorate degrees first occurred in what year at Notre Dame?
+Ground Truth: '1924'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> The university first offered graduate degrees, in the form of a Master of Arts (MA), in the 1854–1855 academic year. The program expanded to include Master of Laws (LL.M.) and Master of Civil Engineering in its early stages of growth, before a formal graduate school education was developed with a thesis not required to receive the degrees. This changed in 1924 with formal requirements developed for graduate degrees, including offering Doctorate (PhD) degrees.
+    - [OTHER CHUNK] -> In Ireland the term institute of technology is the more favored synonym of a regional technical college though the latter is the legally correct term; however, Dublin Institute of Technology is a university in all but name as it can confer degrees in accordance with law, Cork Institute of Technology and another of other Institutes of Technology have delegated authority from HETAC to make awards to and including master's degree level—Level 9 of the National Framework for Qualifications (NFQ)—for all areas of study and Doctorate level in a number of others.
+    - [OTHER CHUNK] -> Founded as the School of Commerce and Finance in 1917, the Olin Business School was named after entrepreneur John M. Olin in 1988. The school's academic programs include BSBA, MBA, Professional MBA (PMBA), Executive MBA (EMBA), MS in Finance, MS in Supply Chain Management, MS in Customer Analytics, Master of Accounting, Global Master of Finance Dual Degree program, and Doctorate programs, as well as non-degree executive education.
+    - [OTHER CHUNK] -> 10 nationally for the number of students who go on to earn PhDs, No. 1 nationally for students who go on to dental school, No. 6 nationally for students who go on to law school, and No.
+    - [OTHER CHUNK] -> Several Muslim countries like Turkey and Iran exhibit high scientific publication. Some countries have tried to encourage scientific research. In Pakistan, establishment of the Higher Education Commission in 2002, resulted in a 5-fold increase in the number of PhDs and a 10-fold increase in the number of scientific research papers in 10 years with the total number of universities increasing from 115 in 2001 to over 400 in 2012.[citation needed] Saudi Arabia has established the King Abdullah University of Science and Technology.
+    - [OTHER CHUNK] -> Doctorate: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> PhDs: People, including fictional
+
+======================================================================
+Row 5: Q: What can cause your memory to deterioriate or not work as well?
+Ground Truth: 'Stress'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> However, memory performance can be enhanced when material is linked to the learning context, even when learning occurs under stress. A separate study by cognitive psychologists Schwabe and Wolf shows that when retention testing is done in a context similar to or congruent with the original learning task (i.e., in the same room), memory impairment and the detrimental effects of stress on learning can be attenuated. Seventy-two healthy female and male university students, randomly assigned to the SECPT stress test or to a control group, were asked to remember the locations of 15 pairs of picture cards – a computerized version of the card game "Concentration" or "Memory".
+    - [OTHER CHUNK] -> RAM can be read and written to anytime the CPU commands it, but ROM is preloaded with data and software that never changes, therefore the CPU can only read from it. ROM is typically used to store the computer's initial start-up instructions. In general, the contents of RAM are erased when the power to the computer is turned off, but ROM retains its data indefinitely.
+    - [OTHER CHUNK] -> In a PC, the ROM contains a specialized program called the BIOS that orchestrates loading the computer's operating system from the hard disk drive into RAM whenever the computer is turned on or reset. In embedded computers, which frequently do not have disk drives, all of the required software may be stored in ROM. Software stored in ROM is often called firmware, because it is notionally more like hardware than software.
+    - [OTHER CHUNK] -> Flash memory blurs the distinction between ROM and RAM, as it retains its data when turned off but is also rewritable. It is typically much slower than conventional ROM and RAM however, so its use is restricted to applications where high speed is unnecessary.
+    - [OTHER CHUNK] -> In more sophisticated computers there may be one or more RAM cache memories, which are slower than registers but faster than main memory. Generally computers with this sort of cache are designed to move frequently needed data into the cache automatically, often without the need for any intervention on the programmer's part.
+    - [OTHER CHUNK] -> Memory: Titles of books, songs, etc.
+    - [OTHER CHUNK] -> RAM: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 63: Q: When was the Commonwealth Aboriginal Councils and Associations Act adopted?
+Ground Truth: '1976'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> In Australia, nonprofit organisations include trade unions, charitable entities, co-operatives, universities and hospitals, mutual societies, grass-root and support groups, political parties, religious groups, incorporated associations, not-for-profit companies, trusts and more. Furthermore, they operate across a multitude of domains and industries, from health, employment, disability and other human services to local sporting clubs, credit unions and research institutes. A nonprofit organisation in Australia can choose from a number of legal forms depending on the needs and activities of the organisation: co-operative, company limited by guarantee, unincorporated association, incorporated association (by the Associations Incorporation Act 1985) or incorporated association or council (by the Commonwealth Aboriginal Councils and Associations Act 1976).
+  * [CONTAINED GT] -> Fraser maintained some of the social reforms of the Whitlam era, while seeking increased fiscal restraint. His government included the first Aboriginal federal parliamentarian, Neville Bonner, and in 1976, Parliament passed the Aboriginal Land Rights Act 1976, which, while limited to the Northern Territory, affirmed "inalienable" freehold title to some traditional lands. Fraser established the multicultural broadcaster SBS, accepted Vietnamese refugees, opposed minority white rule in Apartheid South Africa and Rhodesia and opposed Soviet expansionism.
+  * [CONTAINED GT] -> Socially, while liberty and freedom of enterprise form the basis of its beliefs, elements of the party have wavered between what is termed "small-l liberalism" and social conservatism. Historically, Liberal Governments have been responsible for the carriage of a number of notable "socially liberal" reforms, including the opening of Australia to multiethnic immigration under Menzies and Harold Holt; Holt's 1967 Referendum on Aboriginal Rights; Sir John Gorton's support for cinema and the arts; selection of the first Aboriginal Senator, Neville Bonner, in 1971; and Malcolm Fraser's Aboriginal Land Rights Act 1976. A West Australian Liberal, Ken Wyatt, became the first Indigenous Australian elected to the House of Representatives in 2010.
+    - [OTHER CHUNK] -> Being identified as either "black" or "white" in Australia during the 19th and early 20th centuries was critical in one's employment and social prospects. Various state-based Aboriginal Protection Boards were established which had virtually complete control over the lives of Indigenous Australians – where they lived, their employment, marriage, education and included the power to separate children from their parents. Aborigines were not allowed to vote and were often confined to reserves and forced into low paid or effectively slave labour.
+    - [OTHER CHUNK] -> Norfolk Island (i/ˈnɔːrfək ˈaɪlənd/; Norfuk: Norf'k Ailen) is a small island in the Pacific Ocean located between Australia, New Zealand and New Caledonia, 1,412 kilometres (877 mi) directly east of mainland Australia's Evans Head, and about 900 kilometres (560 mi) from Lord Howe Island. The island is part of the Commonwealth of Australia. Together with two neighbouring islands, it forms one of Australia's external territories.
+    - [OTHER CHUNK] -> Commonwealth of Australia contains New South Wales
+    - [OTHER CHUNK] -> Commonwealth Aboriginal Councils and Associations Act: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Aboriginal Protection Boards: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Aboriginal Land Rights Act: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Commonwealth of Australia: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 68: Q: What image is projected on the floor of the heliometer?
+Ground Truth: 'the sun'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> In Hellenistic times, especially during the 3rd century BCE, as Apollo Helios he became identified among Greeks with Helios, Titan god of the sun, and his sister Artemis similarly equated with Selene, Titan goddess of the moon. In Latin texts, on the other hand, Joseph Fontenrose declared himself unable to find any conflation of Apollo with Sol among the Augustan poets of the 1st century, not even in the conjurations of Aeneas and Latinus in Aeneid XII (161–215). Apollo and Helios/Sol remained separate beings in literary and mythological texts until the 3rd century CE.
+    - [OTHER CHUNK] -> Homer illustrated Paeon the god, and the song both of apotropaic thanksgiving or triumph.[citation needed] Such songs were originally addressed to Apollo, and afterwards to other gods: to Dionysus, to Apollo Helios, to Apollo's son Asclepius the healer. About the 4th century BCE, the paean became merely a formula of adulation; its object was either to implore protection against disease and misfortune, or to offer thanks after such protection had been rendered. It was in this way that Apollo had become recognised as the god of music.
+    - [OTHER CHUNK] -> This was quickly followed by the Solar Challenger which crossed the English Channel in July 1981. In 1990 Eric Scott Raymond in 21 hops flew from California to North Carolina using solar power. Developments then turned back to unmanned aerial vehicles (UAV) with the Pathfinder (1997) and subsequent designs, culminating in the Helios which set the altitude record for a non-rocket-propelled aircraft at 29,524 metres (96,864 ft) in 2001.
+    - [OTHER CHUNK] -> In April 2010, Shell announced its intention to divest from downstream business of all African countries except South Africa and Egypt to Vitol and "Helios". In several countries such as Tunisia, protests and strikes broke out. Shell denied rumours of the sellout.
+    - [OTHER CHUNK] -> Helios/Sol: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Helios: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Apollo Helios: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 91: Q: Colloquial stratum can be traced to several strata in what lexicon?
+Ground Truth: 'Min'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> The first technical dictionary was drafted by John Harris and entitled Lexicon Technicum: Or, An Universal English Dictionary of Arts and Sciences. Harris' book avoided theological and biographical entries; instead it concentrated on science and technology. Published in 1704, the Lexicon technicum was the first book to be written in English that took a methodical approach to describing mathematics and commercial arithmetic along with the physical sciences and navigation.
+    - [OTHER CHUNK] -> In Germany, practical reference works intended for the uneducated majority became popular in the 18th century. The Marperger Curieuses Natur-, Kunst-, Berg-, Gewerkund Handlungs-Lexicon (1712) explained terms that usefully described the trades and scientific and commercial education. Jablonksi Allgemeines Lexicon (1721) was better known than the Handlungs-Lexicon, and underscored technical subjects rather than scientific theory.
+    - [OTHER CHUNK] -> In 1968 Noam Chomsky and Morris Halle published The Sound Pattern of English (SPE), the basis for generative phonology. In this view, phonological representations are sequences of segments made up of distinctive features. These features were an expansion of earlier work by Roman Jakobson, Gunnar Fant, and Morris Halle.
+  * [CONTAINED GT] -> This may be consistent with the theory that in Greek Alpes is a name of non-Indo-European origin (which is common for prominent mountains and mountain ranges in the Mediterranean region). According to the Old English Dictionary, the Latin Alpes might possibly derive from a pre-Indo-European word *alb "hill"; "Albania" is a related derivation. Albania, a name not native to the region known as the country of Albania, has been used as a name for a number of mountainous areas across Europe.
+    - [OTHER CHUNK] -> In modern times, the monumental Dialectological Atlas of the Russian Language (Диалектологический атлас русского языка [dʲɪɐˌlʲɛktəlɐˈɡʲitɕɪskʲɪj ˈatləs ˈruskəvə jɪzɨˈka]), was published in three folio volumes 1986–1989, after four decades of preparatory work.
+    - [OTHER CHUNK] -> Lexicon: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Handlungs-Lexicon: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Dialectological Atlas: People, including fictional
+    - [OTHER CHUNK] -> The Sound Pattern of English: Titles of books, songs, etc.
+    - [OTHER CHUNK] -> the Old English Dictionary: Titles of books, songs, etc.
+
+======================================================================
+Row 123: Q: In the 18th century there was one global trading hub for large diamonds, what was it?
+Ground Truth: 'Hyderabad'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> During the Civil War Arnold, Constable was one of the first stores to issue charge bills of credit to its customers each month instead of on a bi-annual basis. Recognized as an emporium for high-quality fashions, the store soon outgrew the Marble House and erected a cast-iron building on Broadway and Nineteenth Street in 1869; this "Palace of Trade" expanded over the years until it was necessary to move into a larger space in 1914. In 1925, Arnold, Constable merged with Stewart & Company and expanded into the suburbs, first with a 1937 store in New Rochelle, New York and later in Hempstead and Manhasset on Long Island, and in New Jersey.
+    - [OTHER CHUNK] -> Three other efforts to improve regulation of international pesticide trade are the United Nations London Guidelines for the Exchange of Information on Chemicals in International Trade and the United Nations Codex Alimentarius Commission.[citation needed] The former seeks to implement procedures for ensuring that prior informed consent exists between countries buying and selling pesticides, while the latter seeks to create uniform standards for maximum levels of pesticide residues among participating countries. Both initiatives operate on a voluntary basis.
+  * [CONTAINED GT] -> Many historic and tourist sites lie in south central Hyderabad, such as the Charminar, the Mecca Masjid, the Salar Jung Museum, the Nizam's Museum, the Falaknuma Palace, and the traditional retail corridor comprising the Pearl Market, Laad Bazaar and Madina Circle. North of the river are hospitals, colleges, major railway stations and business areas such as Begum Bazaar, Koti, Abids, Sultan Bazaar and Moazzam Jahi Market, along with administrative and recreational establishments such as the Reserve Bank of India, the Telangana Secretariat, the Hyderabad Mint, the Telangana Legislature, the Public Gardens, the Nizam Club, the Ravindra Bharathi, the State Museum, the Birla Temple and the Birla Planetarium.
+    - [OTHER CHUNK] -> At the end of the century the Silk Exchange (Llotja de la Seda) building was erected as the city became a commercial emporium that attracted merchants from all over Europe.
+    - [OTHER CHUNK] -> The city is recognised for its mix of modern architecture which intersects with an extensive range of nineteenth and early twentieth century buildings. Some of the most architecturally noteworthy historic buildings include the World Heritage Site-listed Royal Exhibition Building, constructed over a two-year period for the Melbourne International Exhibition in 1880, A.C. Goode House, a Neo Gothic building located on Collins Street designed by Wright, Reed & Beaver (1891), William Pitt's Venetian Gothic style Old Stock Exchange (1888), William Wardell's Gothic Bank (1883) which features some of Melbourne's finest interiors, the incomplete Parliament House, St Paul's Cathedral (1891) and Flinders Street Station (1909), which was the busiest commuter railway station in the world in the mid-1920s.
+    - [OTHER CHUNK] -> Silk Exchange: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Palace of Trade: Titles of books, songs, etc.
+    - [OTHER CHUNK] -> International Trade: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Pearl Market: Non-GPE locations, mountain ranges, bodies of water
+    - [OTHER CHUNK] -> Old Stock Exchange: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 124: Q: Where did Victoria spend the Christmas of 1900?
+Ground Truth: 'Osborne House'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> In London Chopin took lodgings at Dover Street, where the firm of Broadwood provided him with a grand piano. At his first engagement, on 15 May at Stafford House, the audience included Queen Victoria and Prince Albert. The Prince, who was himself a talented musician, moved close to the keyboard to view Chopin's technique.
+    - [OTHER CHUNK] -> The major soap operas on British television each feature a pub, and these pubs have become household names. The Rovers Return is the pub in Coronation Street, the British soap broadcast on ITV. The Queen Vic (short for the Queen Victoria) is the pub in EastEnders, the major soap on BBC One and the Woolpack in ITV's Emmerdale.
+  * [CONTAINED GT] -> Later Bell had the opportunity to demonstrate the invention personally to Sir William Thomson (later, Lord Kelvin), a renowned Scottish scientist, as well as to Queen Victoria, who had requested a private audience at Osborne House, her Isle of Wight home. She called the demonstration "most extraordinary". The enthusiasm surrounding Bell's public displays laid the groundwork for universal acceptance of the revolutionary device.
+    - [OTHER CHUNK] -> In 1867, Prince Alfred, Duke of Edinburgh and second son of Queen Victoria, visited the islands. The main settlement, Edinburgh of the Seven Seas, was named in honour of his visit. Lewis Carroll's youngest brother, the Reverend Edwin Heron Dodgson, served as an Anglican missionary and schoolteacher in Tristan da Cunha in the 1880s.
+    - [OTHER CHUNK] -> The city has a particular connection to Cunard Line and their fleet of ships. This was particularly evident on 11 November 2008 when the Cunard liner RMS Queen Elizabeth 2 departed the city for the final time amid a spectacular fireworks display after a full day of celebrations. Cunard ships are regularly launched in the city, for example Queen Victoria was named by HRH The Duchess of Cornwall in December 2007, and the Queen named Queen Elizabeth in the city during October 2011.
+    - [OTHER CHUNK] -> Queen Victoria sibling The Queen Mary 2
+    - [OTHER CHUNK] -> Queen Victoria spouse Prince Albert
+    - [OTHER CHUNK] -> Queen Victoria: People, including fictional
+
+======================================================================
+Row 140: Q: When using a sundial, we must adjust the reading to reflect natural discrepancies and the effect of what other influence?
+Ground Truth: 'time zone'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> As is known from the "Sumerian Farmer's Almanac", after the flood season and after the Spring Equinox and the Akitu or New Year Festival, using the canals, farmers would flood their fields and then drain the water. Next they made oxen stomp the ground and kill weeds. They then dragged the fields with pickaxes.
+    - [OTHER CHUNK] -> Clock shifts are usually scheduled near a weekend midnight to lessen disruption to weekday schedules. A one-hour shift is customary, but Australia's Lord Howe Island uses a half-hour shift. Twenty-minute and two-hour shifts have been used in the past.
+    - [OTHER CHUNK] -> Clock shifts were found to increase the risk of heart attack by 10 percent, and to disrupt sleep and reduce its efficiency. Effects on seasonal adaptation of the circadian rhythm can be severe and last for weeks. A 2008 study found that although male suicide rates rise in the weeks after the spring transition, the relationship weakened greatly after adjusting for season.
+    - [OTHER CHUNK] -> From the start of the 2010–11 season on, the stands of the stadium have been officially known as North Bank, East Stand, West Stand and Clock end.
+  * [CONTAINED GT] -> In 1992, after a three-year trial of daylight saving in Queensland, Australia, a referendum on daylight saving was held and defeated with a 54.5% 'no' vote – with regional and rural areas strongly opposed, while those in the metropolitan south-east were in favor. In 2005, the Sporting Goods Manufacturers Association and the National Association of Convenience Stores successfully lobbied for the 2007 extension to US DST. In December 2008, the Daylight Saving for South East Queensland (DS4SEQ) political party was officially registered in Queensland, advocating the implementation of a dual-time zone arrangement for Daylight Saving in South East Queensland while the rest of the state maintains standard time.
+    - [OTHER CHUNK] -> the Spring Equinox: Named hurricanes, battles, wars, sports events, etc.
+    - [OTHER CHUNK] -> Clock: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Daylight Saving: Titles of books, songs, etc.
+
+======================================================================
+Row 147: Q: When did it reach 2 million occupants>
+Ground Truth: '1950'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> This is not surprising, though: While the greatest number of slaves imported from Africa were sent to Brazil, totalizing roughly 3.5 million people, they lived in such miserable conditions that male African Y-DNA there is significantly rare due to the lack of resources and time involved with raising of children, so that most African descent originarily came from relations between white masters and female slaves. From the last decades of the Empire until the 1950s, the proportion of the white population increased significantly while Brazil welcomed 5.5 million immigrants between 1821 and 1932, not much behind its neighbor Argentina with 6.4 million, and it received more European immigrants in its colonial history than the United States. Between 1500 and 1760, 700.000 Europeans settled in Brazil, while 530.000 Europeans settled in the United States for the same given time.
+    - [OTHER CHUNK] -> Miami is a major center, and a leader in finance, commerce, culture, media, entertainment, the arts, and international trade. In 2012, Miami was classified as an Alpha−World City in the World Cities Study Group's inventory. In 2010, Miami ranked seventh in the United States in terms of finance, commerce, culture, entertainment, fashion, education, and other sectors.
+    - [OTHER CHUNK] -> A series of swift Prussian and German victories in eastern France, culminating in the Siege of Metz and the Battle of Sedan, saw the army of the Second Empire decisively defeated (Napoleon III had been captured at Sedan on 2 September). A Government of National Defence declared the Third Republic in Paris on 4 September and continued the war and for another five months, the German forces fought and defeated new French armies in northern France. Following the Siege of Paris, the capital fell on 28 January 1871 and then a revolutionary uprising called the Paris Commune seized power in the capital and held it for two months, until it was bloodily suppressed by the regular French army at the end of May 1871.
+    - [OTHER CHUNK] -> In 1870, following the stunning defeat of the French Army by the Germans in the Franco-Prussian War, French workers and socialist revolutionaries seized Paris and created the Paris Commune. The Commune lasted for two months before it was crushed by the French Army, with much bloodshed. The original red banners of the Commune became icons of the socialist revolution; in 1921 members of the French Communist Party came to Moscow and presented the new Soviet government with one of the original Commune banners; it was placed (and is still in place) in the tomb of Vladimir Lenin, next to his open coffin.
+    - [OTHER CHUNK] -> Following the defeat in World War I, influence of German-speaking elites over Central and Eastern Europe was greatly limited. At the treaty of Versailles Germany was substantially reduced in size. Austria-Hungary was split up.
+    - [OTHER CHUNK] -> Versailles Germany: Countries, cities, states
+    - [OTHER CHUNK] -> 700.000 Europeans: People, including fictional
+    - [OTHER CHUNK] -> World Cities Study Group: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Paris Commune: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 156: Q: At what age did Chopin start playing publicly?
+Ground Truth: '7'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> Frédéric François Chopin (/ˈʃoʊpæn/; French pronunciation: ​[fʁe.de.ʁik fʁɑ̃.swa ʃɔ.pɛ̃]; 22 February or 1 March 1810 – 17 October 1849), born Fryderyk Franciszek Chopin,[n 1] was a Polish and French (by citizenship and birth of father) composer and a virtuoso pianist of the Romantic era, who wrote primarily for the solo piano. He gained and has maintained renown worldwide as one of the leading musicians of his era, whose "poetic genius was based on a professional technique that was without equal in his generation." Chopin was born in what was then the Duchy of Warsaw, and grew up in Warsaw, which after 1815 became part of Congress Poland. A child prodigy, he completed his musical education and composed his earlier works in Warsaw before leaving Poland at the age of 20, less than a month before the outbreak of the November 1830 Uprising.
+  * [CONTAINED GT] -> Chopin formed a friendship with Franz Liszt and was admired by many of his musical contemporaries, including Robert Schumann. In 1835 he obtained French citizenship. After a failed engagement to Maria Wodzińska, from 1837 to 1847 he maintained an often troubled relationship with the French writer George Sand.
+    - [OTHER CHUNK] -> A brief and unhappy visit to Majorca with Sand in 1838–39 was one of his most productive periods of composition. In his last years, he was financially supported by his admirer Jane Stirling, who also arranged for him to visit Scotland in 1848. Through most of his life, Chopin suffered from poor health.
+    - [OTHER CHUNK] -> All of Chopin's compositions include the piano. Most are for solo piano, though he also wrote two piano concertos, a few chamber pieces, and some songs to Polish lyrics. His keyboard style is highly individual and often technically demanding; his own performances were noted for their nuance and sensitivity.
+    - [OTHER CHUNK] -> Chopin invented the concept of instrumental ballade. His major piano works also include mazurkas, waltzes, nocturnes, polonaises, études, impromptus, scherzos, preludes and sonatas, some published only after his death. Influences on his compositional style include Polish folk music, the classical tradition of J.
+    - [OTHER CHUNK] -> Chopin sibling Ludwika
+    - [OTHER CHUNK] -> Chopin: People, including fictional
+
+======================================================================
+Row 180: Q: When did the Australian mandolin movement begin?
+Ground Truth: '20th century'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> The Sydney Mandolins (Artistic Director: Adrian Hooper) have contributed greatly to the repertoire through commissioning over 200 works by Australian and International composers. Most of these works have been released on Compact Disks and can regularly be heard on radio stations on the ABC and MBS networks. One of their members, mandolin virtuoso Paul Hooper, has had a number of Concertos written for him by composers such as Eric Gross.
+    - [OTHER CHUNK] -> Skinner founded the Sydney Mandolin Orchestra, the oldest surviving mandolin orchestra in Australia.
+    - [OTHER CHUNK] -> The national organization, Classical Mandolin Society of America, founded by Norman Levine, represents these groups. Prominent modern mandolinists and composers for mandolin in the classical music tradition include Samuel Firstman, Howard Fry, Rudy Cipolla, Dave Apollon, Neil Gladd, Evan Marshall, Marilynn Mair and Mark Davis (the Mair-Davis Duo), Brian Israel, David Evans, Emanuil Shynkman, Radim Zenkl, David Del Tredici and Ernst Krenek.
+    - [OTHER CHUNK] -> It also forms the basis of Paul McCartney's 2007 hit "Dance Tonight." That was not the first time a Beatle played a mandolin, however; that distinction goes to George Harrison on Gone Troppo, the title cut from the 1982 album of the same name. The mandolin is taught in Lanarkshire by the Lanarkshire Guitar and Mandolin Association to over 100 people. Also more recently hard rock supergroup Them Crooked Vultures have been playing a song based primarily using a mandolin.
+  * [CONTAINED GT] -> The instrument was primarily used in a classical tradition with Mandolin orchestras, so called Estudiantinas or in Germany Zupforchestern appearing in many cities. Following this continental popularity of the mandolin family local traditions appeared outside of Europe in the Americas and in Japan. Travelling mandolin virtuosi like Giuseppe Pettine, Raffaele Calace and Silvio Ranieri contributed to the mandolin becoming a "fad" instrument in the early 20th century.
+    - [OTHER CHUNK] -> Mandolin Association: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Sydney Mandolin Orchestra: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Mandolin: People, including fictional
+    - [OTHER CHUNK] -> Classical Mandolin Society of America: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Sydney Mandolins (: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 189: Q: In what century did Muslims conquer North Africa?
+Ground Truth: '7th'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> However many early history books like the Islamic Conquest of Syria Fatuhusham by al-Imam al-Waqidi state that after the conversion to Islam Muawiyah's father Abu Sufyan ibn Harb and his brothers Yazid ibn Abi Sufyan were appointed as commanders in the Muslim armies by Muhammad. Muawiyah, Abu Sufyan ibn Harb, Yazid ibn Abi Sufyan and Hind bint Utbah fought in the Battle of Yarmouk. The defeat of the Byzantine Emperor Heraclius at the Battle of Yarmouk opened the way for the Muslim expansion into Jerusalem and Syria.
+    - [OTHER CHUNK] -> Besides comprising the majority of the Y-DNA in Somalis, the E1b1b1a (formerly E3b1a) haplogroup also makes up a significant proportion of the paternal DNA of Ethiopians, Sudanese, Egyptians, Berbers, North African Arabs, as well as many Mediterranean populations. Sanchez et al. (2005) observed the M78 subclade of E1b1b in about 77% of their Somali male samples.
+    - [OTHER CHUNK] -> After the Marzpanate period (428–636), Armenia emerged as the Emirate of Armenia, an autonomous principality within the Arabic Empire, reuniting Armenian lands previously taken by the Byzantine Empire as well. The principality was ruled by the Prince of Armenia, and recognized by the Caliph and the Byzantine Emperor. It was part of the administrative division/emirate Arminiya created by the Arabs, which also included parts of Georgia and Caucasian Albania, and had its center in the Armenian city, Dvin.
+  * [CONTAINED GT] -> The Byzantines were able to regain control of the country after a brief Sasanian Persian invasion early in the 7th century amidst the Byzantine–Sasanian War of 602–628 during which they established a new short-lived province for ten years known as Sasanian Egypt, until 639–42, when Egypt was invaded and conquered by the Islamic Empire by the Muslim Arabs. When they defeated the Byzantine Armies in Egypt, the Arabs brought Sunni Islam to the country. Early in this period, Egyptians began to blend their new faith with indigenous beliefs and practices, leading to various Sufi orders that have flourished to this day.
+    - [OTHER CHUNK] -> Many insurgency leaders are Islamists and claim to be fighting a religious war to reestablish the Islamic Caliphate of centuries past. Iraq's former president, Saddam Hussein was captured by U.S. forces in December 2003.
+    - [OTHER CHUNK] -> Arabic Empire: Countries, cities, states
+    - [OTHER CHUNK] -> Islamic Caliphate of centuries past: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> North African Arabs: People, including fictional
+    - [OTHER CHUNK] -> Islamic Empire: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Islamic Conquest: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 222: Q: Where was Burke worried Britain might not win a war?
+Ground Truth: 'America'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> The 19th-century Liberal Prime Minister William Ewart Gladstone considered Burke "a magazine of wisdom on Ireland and America" and in his diary recorded: "Made many extracts from Burke—sometimes almost divine". The Radical MP and anti-Corn Law activist Richard Cobden often praised Burke's Thoughts and Details on Scarcity. The Liberal historian Lord Acton considered Burke one of the three greatest Liberals, along with William Gladstone and Thomas Babington Macaulay.
+    - [OTHER CHUNK] -> Burke's Reflections on the Revolution in France was controversial at the time of its publication, but after his death, it was to become his best known and most influential work, and a manifesto for Conservative thinking.
+    - [OTHER CHUNK] -> Napoleon III, since the Crimean War Britain's closest ally, visited London in April 1855, and from 17 to 28 August the same year Victoria and Albert returned the visit. Napoleon III met the couple at Dunkirk and accompanied them to Paris. They visited the Exposition Universelle (a successor to Albert's 1851 brainchild the Great Exhibition) and Napoleon I's tomb at Les Invalides (to which his remains had only been returned in 1840), and were guests of honour at a 1,200-guest ball at the Palace of Versailles.
+    - [OTHER CHUNK] -> On 1 January 1901, Nigeria became a British protectorate, and part of the British Empire, the foremost world power at the time. In the late 19th and early 20th centuries the independent kingdoms of what would become Nigeria fought a number of conflicts against the British Empire's efforts to expand its territory. By war, the British conquered Benin in 1897, and, in the Anglo-Aro War (1901–1902), defeated other opponents.
+  * [CONTAINED GT] -> The geographical terms "Near East" and "Far East" referring to areas of the globe in or contiguous to the former British Empire and the neighboring colonies of the Dutch, Portuguese, Spanish and Germans, fit together as a pair based on the opposites of far and near, suggesting that they were innovated together. They appear together in the journals of the mid-19th century. Both terms were used before then with local British and American meanings: the near or far east of a field, village or shire.
+    - [OTHER CHUNK] -> the Anglo-Aro War participant British Empire
+    - [OTHER CHUNK] -> the Anglo-Aro War: Named hurricanes, battles, wars, sports events, etc.
+    - [OTHER CHUNK] -> Burke Reflections on the Revolution: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> the Crimean War Britain: Named hurricanes, battles, wars, sports events, etc.
+    - [OTHER CHUNK] -> Burke Thoughts and Details: People, including fictional
+
+======================================================================
+Row 254: Q: What other musician shows to have elements of Chopin in his work?
+Ground Truth: 'Liszt'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> They include Frédéric Chopin (Poland), Franz Liszt (Hungary), Jacques Offenbach (Germany), and Igor Stravinsky (Russia).
+    - [OTHER CHUNK] -> Frédéric François Chopin (/ˈʃoʊpæn/; French pronunciation: ​[fʁe.de.ʁik fʁɑ̃.swa ʃɔ.pɛ̃]; 22 February or 1 March 1810 – 17 October 1849), born Fryderyk Franciszek Chopin,[n 1] was a Polish and French (by citizenship and birth of father) composer and a virtuoso pianist of the Romantic era, who wrote primarily for the solo piano. He gained and has maintained renown worldwide as one of the leading musicians of his era, whose "poetic genius was based on a professional technique that was without equal in his generation." Chopin was born in what was then the Duchy of Warsaw, and grew up in Warsaw, which after 1815 became part of Congress Poland. A child prodigy, he completed his musical education and composed his earlier works in Warsaw before leaving Poland at the age of 20, less than a month before the outbreak of the November 1830 Uprising.
+    - [OTHER CHUNK] -> In his native Poland, in France, where he composed most of his works, and beyond, Chopin's music, his status as one of music's earliest superstars, his association (if only indirect) with political insurrection, his love life and his early death have made him, in the public consciousness, a leading symbol of the Romantic era. His works remain popular, and he has been the subject of numerous films and biographies of varying degrees of historical accuracy.
+    - [OTHER CHUNK] -> Fryderyk's father, Nicolas Chopin, was a Frenchman from Lorraine who had emigrated to Poland in 1787 at the age of sixteen. Nicolas tutored children of the Polish aristocracy, and in 1806 married Justyna Krzyżanowska, a poor relative of the Skarbeks, one of the families for whom he worked. Fryderyk was baptized on Easter Sunday, 23 April 1810, in the same church where his parents had married, in Brochów.
+    - [OTHER CHUNK] -> In 1817 the Saxon Palace was requisitioned by Warsaw's Russian governor for military use, and the Warsaw Lyceum was reestablished in the Kazimierz Palace (today the rectorate of Warsaw University). Fryderyk and his family moved to a building, which still survives, adjacent to the Kazimierz Palace. During this period, Fryderyk was sometimes invited to the Belweder Palace as playmate to the son of the ruler of Russian Poland, Grand Duke Constantine; he played the piano for the Duke and composed a march for him.
+    - [OTHER CHUNK] -> Frédéric Chopin country_of_citizenship Poland
+    - [OTHER CHUNK] -> Frédéric Chopin: People, including fictional
+
+======================================================================
+Row 299: Q: From where in the solar system could the meteorites have come?
+Ground Truth: 'Moon'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> Miami is the southern terminus of Amtrak's Atlantic Coast services, running two lines, the Silver Meteor and the Silver Star, both terminating in New York City. The Miami Amtrak Station is located in the suburb of Hialeah near the Tri-Rail/Metrorail Station on NW 79 St and NW 38 Ave. Current construction of the Miami Central Station will move all Amtrak operations from its current out-of-the-way location to a centralized location with Metrorail, MIA Mover, Tri-Rail, Miami International Airport, and the Miami Intermodal Center all within the same station closer to Downtown.
+  * [CONTAINED GT] -> Both the HST and AO telescopes on Earth has made many new discoveries within the Solar System since the mid-1990s, with a large increase in the number of known satellites and moons around the Outer Planets for example. In 2004 and 2005, five new small satellites of Neptune with diameters between 38 and 61 kilometres were discovered.
+    - [OTHER CHUNK] -> Neptune is the eighth and farthest known planet from the Sun in the Solar System. It is the fourth-largest planet by diameter and the third-largest by mass. Among the giant planets in the Solar System, Neptune is the most dense.
+    - [OTHER CHUNK] -> Neptune is not visible to the unaided eye and is the only planet in the Solar System found by mathematical prediction rather than by empirical observation. Unexpected changes in the orbit of Uranus led Alexis Bouvard to deduce that its orbit was subject to gravitational perturbation by an unknown planet. Neptune was subsequently observed with a telescope on 23 September 1846 by Johann Galle within a degree of the position predicted by Urbain Le Verrier.
+    - [OTHER CHUNK] -> In contrast to the hazy, relatively featureless atmosphere of Uranus, Neptune's atmosphere has active and visible weather patterns. For example, at the time of the Voyager 2 flyby in 1989, the planet's southern hemisphere had a Great Dark Spot comparable to the Great Red Spot on Jupiter. These weather patterns are driven by the strongest sustained winds of any planet in the Solar System, with recorded wind speeds as high as 2,100 kilometres per hour (580 m/s; 1,300 mph).
+    - [OTHER CHUNK] -> Solar System part Sun
+    - [OTHER CHUNK] -> Solar System part Neptune
+    - [OTHER CHUNK] -> Solar System: Buildings, airports, highways, bridges, etc.
+    - [OTHER CHUNK] -> the Silver Meteor: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Outer Planets: Non-GPE locations, mountain ranges, bodies of water
+
+======================================================================
+Row 309: Q: Which direction do the rivers flow near the Triple Divide Peak?
+Ground Truth: 'north'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> In eastern Pennsylvania the Great Appalachian Valley, or Great Valley, was accessible by reason of a broad gateway between the end of South Mountain and the Highlands, and many Germans and Moravians settled here between the Susquehanna and Delaware Rivers forming the Pennsylvania Dutch community, some of whom even now speak a unique American dialect of German known as the "Pennsylvania German language" or "Pennsylvania Dutch." These latecomers to the New World were forced to the frontier to find cheap land. With their followers of both German, English and Scots-Irish origin, they worked their way southward and soon occupied all of the Shenandoah Valley, ceded by the Iroquois, and the upper reaches of the Great Valley tributaries of the Tennessee River, ceded by the Cherokee.
+  * [CONTAINED GT] -> In Queens, the elevated AirTrain people mover system connects JFK International Airport to the New York City Subway and the Long Island Rail Road; a separate AirTrain system is planned alongside the Grand Central Parkway to connect LaGuardia Airport to these transit systems. For intercity rail, New York City is served by Amtrak, whose busiest station by a significant margin is Pennsylvania Station on the West Side of Manhattan, from which Amtrak provides connections to Boston, Philadelphia, and Washington, D.C. along the Northeast Corridor, as well as long-distance train service to other North American cities.
+    - [OTHER CHUNK] -> The President of Delaware was a member of the Court of Appeals; the presiding officers of the two houses of the state legislature also served in the executive department as Vice Presidents. In both Delaware and Pennsylvania, members of the executive council served at the same time as judges. On the other hand, many southern states explicitly required separation of powers.
+    - [OTHER CHUNK] -> The city was incorporated in 1854, the same year in which the Camden and Atlantic Railroad train service began. Built on the edge of the bay, this served as the direct link of this remote parcel of land with Philadelphia, Pennsylvania. That same year, construction of the Absecon Lighthouse, designed by George Meade of the Corps of Topographical Engineers, was approved, with work initiated the next year.
+    - [OTHER CHUNK] -> In July 2010, Governor Chris Christie announced that a state takeover of the city and local government "was imminent". Comparing regulations in Atlantic City to an "antique car", Atlantic City regulatory reform is a key piece of Gov. Chris Christie's plan, unveiled on July 22, to reinvigorate an industry mired in a four-year slump in revenue and hammered by fresh competition from casinos in the surrounding states of Delaware, Pennsylvania, Connecticut, and more recently, Maryland.
+    - [OTHER CHUNK] -> Delaware Rivers located_in Pennsylvania
+    - [OTHER CHUNK] -> Delaware Rivers: Countries, cities, states
+
+======================================================================
+Row 312: Q: When did Christopher Columbus sail to the Bahamas?
+Ground Truth: '1492'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> The most commonly given starting point for the Middle Ages is 476, first used by Bruni.[A] For Europe as a whole, 1500 is often considered to be the end of the Middle Ages, but there is no universally agreed upon end date. Depending on the context, events such as Christopher Columbus's first voyage to the Americas in 1492, the conquest of Constantinople by the Turks in 1453, or the Protestant Reformation in 1517 are sometimes used. English historians often use the Battle of Bosworth Field in 1485 to mark the end of the period.
+  * [CONTAINED GT] -> The combined Spanish monarchies of Castile and Aragon sponsored the voyage of exploration by Christopher Columbus (d. 1506) in 1492 that discovered the Americas. The English crown under Henry VII sponsored the voyage of John Cabot (d.
+    - [OTHER CHUNK] -> The uses of copper in art were not limited to currency: it was used by Renaissance sculptors, in photographic technology known as the daguerreotype, and the Statue of Liberty. Copper plating and copper sheathing for ships' hulls was widespread; the ships of Christopher Columbus were among the earliest to have this feature. The Norddeutsche Affinerie in Hamburg was the first modern electroplating plant starting its production in 1876.
+    - [OTHER CHUNK] -> The foundations of the British Empire were laid when England and Scotland were separate kingdoms. In 1496 King Henry VII of England, following the successes of Spain and Portugal in overseas exploration, commissioned John Cabot to lead a voyage to discover a route to Asia via the North Atlantic. Cabot sailed in 1497, five years after the European discovery of America, and although he successfully made landfall on the coast of Newfoundland (mistakenly believing, like Christopher Columbus, that he had reached Asia), there was no attempt to found a colony.
+  * [CONTAINED GT] -> The Spanish monarchs met the Portuguese challenge by financing the expedition of Christopher Columbus to find a western sea route to India, leading to the discovery of the Americas in 1492.
+    - [OTHER CHUNK] -> Christopher Columbus: People, including fictional
+
+======================================================================
+Row 373: Q: Which country has 11% of households who speak Afrikaans?
+Ground Truth: 'Namibia'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> Other than by appearance, "Coloureds" can usually be distinguished from "Blacks" by language. Most speak Afrikaans or English as a first language, as opposed to Bantu languages such as Zulu or Xhosa. They also tend to have more European-sounding names than Bantu names.
+  * [CONTAINED GT] -> Outside of the Low Countries, it is the native language of the majority of the population of Suriname, and also holds official status in the Caribbean island nations of Aruba, Curaçao and Sint Maarten. Historical minorities on the verge of extinction remain in parts of France and Germany, and in Indonesia,[n 1] while up to half a million native speakers may reside in the United States, Canada and Australia combined.[n 2] The Cape Dutch dialects of Southern Africa have evolved into Afrikaans, a mutually intelligible daughter language[n 3] which is spoken to some degree by at least 16 million people, mainly in South Africa and Namibia.[n 4]
+    - [OTHER CHUNK] -> Dutch belongs to its own West Germanic sub-group, West Low Franconian, paired with its sister language Limburgish, or East Low Franconian. Closest relative is the mutual intelligible daughter language Afrikaans. Other West Germanic languages related to Dutch are German, English and the Frisian languages, and the non standardised languages Low German and Yiddish.
+    - [OTHER CHUNK] -> Many native speakers of Dutch, both in Belgium and the Netherlands, assume that Afrikaans and West Frisian are dialects of Dutch but are considered separate and distinct from Dutch: a daughter language and a sister language, respectively. Afrikaans evolved mainly from 17th century Dutch dialects, but had influences from various other languages in South Africa. However, it is still largely mutually intelligible with Dutch.
+    - [OTHER CHUNK] -> European Dutch remained the literary language until the start of the 1920s, when under pressure of Afrikaner nationalism the local "African" Dutch was preferred over the written, European-based standard. In 1925, section 137 of the 1909 constitution of the Union of South Africa was amended by Act 8 of 1925, stating "the word Dutch in article 137 [...] is hereby declared to include Afrikaans". The constitution of 1983 only listed English and Afrikaans as official languages.
+    - [OTHER CHUNK] -> Afrikaans influenced_by Dutch
+    - [OTHER CHUNK] -> Afrikaans located_in South Africa
+    - [OTHER CHUNK] -> Afrikaans different_from Dutch
+    - [OTHER CHUNK] -> Afrikaans: People, including fictional
+
+======================================================================
+Row 376: Q: How many days after France sued for peace did the Romanians meet the requests of the USSR?
+Ground Truth: '6'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> After the Austro-Turkish War of 1716–1718 the Treaty of Passarowitz confirmed the loss of the Banat, Serbia and "Little Walachia" (Oltenia) to Austria. The Treaty also revealed that the Ottoman Empire was on the defensive and unlikely to present any further aggression in Europe. The Austro-Russian–Turkish War, which was ended by the Treaty of Belgrade in 1739, resulted in the recovery of Serbia and Oltenia, but the Empire lost the port of Azov, north of the Crimean Peninsula, to the Russians.
+  * [CONTAINED GT] -> By the Treaty of Paris (1763), France regained the five establishments captured by the British during the war (Pondichéry, Mahe, Karikal, Yanam and Chandernagar) but was prevented from erecting fortifications and keeping troops in Bengal (art. XI). Elsewhere in India, the French were to remain a military threat, particularly during the War of American Independence, and up to the capture of Pondichéry in 1793 at the outset of the French Revolutionary Wars without any military presence.
+  * [CONTAINED GT] -> The Anglo-French hostilities were ended in 1763 by the Treaty of Paris, which involved a complex series of land exchanges, the most important being France's cession to Spain of Louisiana, and to Great Britain the rest of New France except for the islands of St. Pierre and Miquelon. Faced with the choice of retrieving either New France or its Caribbean island colonies of Guadeloupe and Martinique, France chose the latter to retain these lucrative sources of sugar, writing off New France as an unproductive, costly territory.
+    - [OTHER CHUNK] -> During the Paris Peace Conference, the "Big Four"—France, Italy, United Kingdom and the United States—held noticeably more power and influence on the proceedings and outcome of the treaties than Japan. The Big Four were leading architects of the Treaty of Versailles which was signed by Germany; the Treaty of St. Germain, with Austria; the Treaty of Neuilly, with Bulgaria; the Treaty of Trianon, with Hungary; and the Treaty of Sèvres, with the Ottoman Empire.
+  * [CONTAINED GT] -> Her Prussophile successor, Peter III, at once recalled Russian armies from Berlin (see: the Treaty of Saint Petersburg (1762)) and mediated Frederick's truce with Sweden. He also placed a corps of his own troops under Frederick's command This turn of events has become known as the Miracle of the House of Brandenburg. Frederick was then able to muster a larger army of 120,000 men and concentrate it against Austria.
+    - [OTHER CHUNK] -> Treaty of Saint Petersburg: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Treaty of St. Germain: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> Treaty of Paris: Companies, agencies, institutions, etc.
+    - [OTHER CHUNK] -> the Treaty of Belgrade: Named documents made into laws.
+
+======================================================================
+Row 411: Q: What percentage of households earned less than 977 per month?
+Ground Truth: '14'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+    - [OTHER CHUNK] -> Race was asked differently in the Census 2000 in several other ways than previously. Most significantly, respondents were given the option of selecting one or more race categories to indicate racial identities. Data show that nearly seven million Americans identified as members of two or more races.
+    - [OTHER CHUNK] -> The United States Consumer Price Index, published by the Bureau of Labor Statistics, is a measure estimating the average price of consumer goods and services in the United States. It reflects inflation as experienced by consumers in their day-to-day living expenses. A graph showing the U.S.
+    - [OTHER CHUNK] -> As at most other universities, Notre Dame's students run a number of news media outlets. The nine student-run outlets include three newspapers, both a radio and television station, and several magazines and journals. Begun as a one-page journal in September 1876, the Scholastic magazine is issued twice monthly and claims to be the oldest continuous collegiate publication in the United States.
+    - [OTHER CHUNK] -> 1,400 of the 3,577 (39.1%) were admitted under the early action plan. Admitted students came from 1,311 high schools and the average student traveled more than 750 miles to Notre Dame, making it arguably the most representative university in the United States. While all entering students begin in the College of the First Year of Studies, 25% have indicated they plan to study in the liberal arts or social sciences, 24% in engineering, 24% in business, 24% in science, and 3% in architecture.
+  * [CONTAINED GT] -> In 2015-2016, Notre Dame ranked 18th overall among "national universities" in the United States in U.S. News & World Report's Best Colleges 2016. In 2014, USA Today ranked Notre Dame 10th overall for American universities based on data from College Factual.
+    - [OTHER CHUNK] -> Bureau of Labor Statistics located_in United States
+    - [OTHER CHUNK] -> the Census 2000: Named hurricanes, battles, wars, sports events, etc.
+    - [OTHER CHUNK] -> Bureau of Labor Statistics: Companies, agencies, institutions, etc.
+
+======================================================================
+Row 466: Q: Has some states like Arizona embraced their Mexican history?
+Ground Truth: 'The state (like its southwestern neighbors) has had close linguistic and cultural ties with Mexico'
+Answer Given: 'I'm sorry, I couldn't find that in the database.'
+Retrieved Context Chunks:
+  * [CONTAINED GT] -> The state (like its southwestern neighbors) has had close linguistic and cultural ties with Mexico. The state outside the Gadsden Purchase of 1853 was part of the New Mexico Territory until 1863, when the western half was made into the Arizona Territory. The area of the former Gadsden Purchase contained a majority of Spanish-speakers until the 1940s, although the Tucson area had a higher ratio of anglophones (including Mexican Americans who were fluent in English); the continuous arrival of Mexican settlers increases the number of Spanish-speakers.
+    - [OTHER CHUNK] -> Due in large part to the persuasion of representative Servando Teresa de Mier, Mexico City was chosen because it was the center of the country's population and history, even though Querétaro was closer to the center geographically. The choice was official on November 18, 1824, and Congress delineated a surface area of two leagues square (8,800 acres) centered on the Zocalo. This area was then separated from the State of Mexico, forcing that state's government to move from the Palace of the Inquisition (now Museum of Mexican Medicine) in the city to Texcoco.
+    - [OTHER CHUNK] -> This area did not include the population centers of the towns of Coyoacán, Xochimilco, Mexicaltzingo and Tlalpan, all of which remained as part of the State of Mexico.
+    - [OTHER CHUNK] -> West of the Historic Center (Centro Histórico) along Paseo de la Reforma are many of the city's wealthiest neighborhoods such as Polanco, Lomas de Chapultepec, Bosques de las Lomas, Santa Fe, and (in the State of Mexico) Interlomas, which are also the city's most important areas of class A office space, corporate headquarters, skyscrapers and shopping malls. Nevertheless, areas of lower income colonias exist in some cases cheek-by-jowl with rich neighborhoods, particularly in the case of Santa Fe.
+    - [OTHER CHUNK] -> North of the Historic Center, Azcapotzalco and Gustavo A. Madero have important industrial centers and neighborhoods that range from established middle-class colonias such as Claveria and Lindavista to huge low-income housing areas that share hillsides with adjacent municipalities in the State of Mexico. In recent years much of northern Mexico City's industry has moved to nearby municipalities in the State of Mexico.
+    - [OTHER CHUNK] -> Arizona Territory: Countries, cities, states
+    - [OTHER CHUNK] -> State of Mexico: Countries, cities, states

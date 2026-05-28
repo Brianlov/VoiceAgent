@@ -1,0 +1,307 @@
+import os
+import asyncio
+import re
+from neo4j import AsyncGraphDatabase
+import logging
+from typing import List
+import json
+import numpy as np
+
+from sentence_transformers import SentenceTransformer
+from pipecat.frames.frames import (
+    TextFrame, Frame, InterimTranscriptionFrame, 
+    UserStoppedSpeakingFrame, StartFrame, TranscriptionFrame, 
+    LLMMessagesAppendFrame, LLMMessagesFrame, LLMContextFrame
+)
+from pipecat.processors.frame_processor import FrameProcessor
+import pipecat.frames.frames
+
+logger = logging.getLogger(__name__)
+
+class GraphRAGProcessor(FrameProcessor):
+    LAST_QUERY = ""
+    LAST_CONTEXT = ""
+    
+    def __init__(self, neo4j_uri: str, neo4j_user: str, neo4j_password: str, neo4j_db: str, knowledge_base: List[str] = None):
+        super().__init__()
+        
+        self.neo4j_uri = neo4j_uri
+        self.neo4j_user = neo4j_user
+        self.neo4j_password = neo4j_password
+        self.neo4j_db = neo4j_db
+        self.driver = AsyncGraphDatabase.driver(self.neo4j_uri, auth=(self.neo4j_user, self.neo4j_password))
+        
+        # Load the same model used for embedding
+        print("🔧 GraphRAG [PURE v1]: Loading Embedding Model (all-mpnet-base-v2)...")
+        self.model = SentenceTransformer("all-mpnet-base-v2")
+        
+        self._initialized = False
+        self.saved_stop_frame = None
+
+    async def _initialize_graph(self):
+        """Verify Neo4j Connection."""
+        if self._initialized: return
+
+        print(f"🧠 GraphRAG [PURE v1]: Verifying Neo4j Connection at {self.neo4j_uri}...")
+        try:
+            await self.driver.verify_connectivity()
+            print(f"✅ GraphRAG [PURE v1]: Connected to Neo4j successfully.")
+            self._initialized = True
+        except Exception as e:
+            print(f"❌ GraphRAG [PURE v1]: Failed to connect to Neo4j: {e}")
+
+    async def retrieve(self, query: str, as_list: bool = False):
+        print(f"🚨 RETRIEVE [PURE GraphRAG v1] CALLED with: '{query}'")
+        if not self._initialized:
+            await self._initialize_graph()
+            
+        if not self._initialized:
+             return [] if as_list else ""
+
+        # 1. Generate Embedding for the User Query (using non-blocking async thread)
+        query_vector = await asyncio.to_thread(self.model.encode, query)
+        query_vector = query_vector.tolist()
+
+        # 2. Upgraded Robust Cypher Query (Compatible with all Neo4j versions)
+        cypher = """
+        // Phase 1: Vector similarity search to find the entry points (limit to 3 for tighter focus)
+        CALL db.index.vector.queryNodes('entity_vector_index', 3, $query_vector) 
+        YIELD node AS e, score AS entity_score
+        
+        WITH e, entity_score,
+             coalesce(e.name, e.id) + ": " + coalesce(e.description, "No description available") AS entity_desc
+             
+        // Phase 2: Traverse undirected 1-hop relationships (limit to 8 neighbors per entity for speed)
+        OPTIONAL MATCH (e)-[r]-(neighbor:Entity)
+        WHERE type(r) <> "MENTIONED_IN"
+        WITH e, entity_score, entity_desc, neighbor, r,
+             coalesce(startNode(r).name, startNode(r).id) + " " + type(r) + " " + coalesce(endNode(r).name, endNode(r).id) AS fact_1hop
+             
+        WITH e, entity_score, entity_desc,
+             collect(DISTINCT neighbor)[0..8] AS neighbors1,
+             collect(DISTINCT fact_1hop) AS facts_1hop
+             
+        // Phase 3: Traverse undirected 2-hop relationships (limit to 8 neighbors per 1-hop neighbor)
+        UNWIND (case when size(neighbors1) > 0 then neighbors1 else [null] end) AS n1
+        OPTIONAL MATCH (n1)-[r2]-(neighbor2:Entity)
+        WHERE type(r2) <> "MENTIONED_IN" AND neighbor2 <> e
+        WITH e, entity_score, entity_desc, neighbors1, facts_1hop, neighbor2, r2,
+             coalesce(startNode(r2).name, startNode(r2).id) + " " + type(r2) + " " + coalesce(endNode(r2).name, endNode(r2).id) AS fact_2hop
+             
+        WITH e, entity_score, entity_desc, neighbors1, facts_1hop,
+             collect(DISTINCT neighbor2)[0..8] AS neighbors2,
+             collect(DISTINCT fact_2hop) AS facts_2hop
+             
+        WITH e, entity_score, entity_desc,
+             neighbors1 + neighbors2 AS neighbors,
+             facts_1hop + facts_2hop AS entity_facts
+             
+        // Phase 4: Get context chunks linked to all matched entities
+        OPTIONAL MATCH (e)-[:MENTIONED_IN]->(c_direct:Context)
+        
+        WITH entity_score, entity_facts, entity_desc, neighbors, c_direct
+        UNWIND (case when size(neighbors) > 0 then neighbors else [null] end) AS n
+        OPTIONAL MATCH (n)-[:MENTIONED_IN]->(c_neighbor:Context)
+        
+        WITH entity_score, entity_facts, entity_desc,
+             collect(DISTINCT c_direct) AS direct_chunks,
+             collect(DISTINCT c_neighbor) AS neighbor_chunks
+             
+        WITH entity_score, entity_facts, entity_desc,
+             direct_chunks + neighbor_chunks AS all_graph_chunks
+             
+        UNWIND all_graph_chunks AS chunk
+        WITH DISTINCT chunk, entity_score, entity_facts, entity_desc
+        WHERE chunk IS NOT NULL
+        
+        RETURN 
+        
+            collect(DISTINCT entity_facts) AS all_facts,
+            collect(DISTINCT entity_desc) AS all_descriptions,
+            chunk.text AS chunk_text,
+            chunk.embedding AS chunk_embedding,
+            entity_score AS final_score
+        """
+        
+        context_parts = []
+        raw_chunks = []
+        try:
+            async with self.driver.session(database=self.neo4j_db) as session:
+                print(f"🔍 GraphRAG [PURE v1]: Executing Cypher traversal query...")
+                result = await session.run(cypher, query_vector=query_vector)
+                records = await result.data()
+                print(f"📦 GraphRAG [PURE v1]: Retrieval returned {len(records)} candidate traversed chunks")
+
+                if records:
+                    candidate_chunks = []
+                    seen_texts = set()
+                    
+                    # 3. Candidate Ranking in Python (solves the equal-score random ordering bug)
+                    for r in records:
+                        chunk_text = r.get('chunk_text')
+                        if chunk_text and chunk_text not in seen_texts:
+                            seen_texts.add(chunk_text)
+                            
+                            chunk_emb = r.get('chunk_embedding')
+                            sim_score = 0.0
+                            if chunk_emb and query_vector:
+                                # Compute cosine similarity in Python
+                                dot_prod = np.dot(query_vector, chunk_emb)
+                                norm_q = np.linalg.norm(query_vector)
+                                norm_c = np.linalg.norm(chunk_emb)
+                                if norm_q > 0 and norm_c > 0:
+                                    sim_score = dot_prod / (norm_q * norm_c)
+                            
+                            candidate_chunks.append({
+                                'text': chunk_text,
+                                'similarity': sim_score,
+                                'facts': r.get('all_facts', []),
+                                'descriptions': r.get('all_descriptions', [])
+                             })
+                    
+                    # Rank candidate traversed chunks by similarity to the query
+                    candidate_chunks.sort(key=lambda x: x['similarity'], reverse=True)
+                    top_candidates = candidate_chunks[:5]
+                    
+                    unique_facts = set()
+                    unique_descriptions = set()
+                    unique_chunks = []
+                    
+                    for cand in top_candidates:
+                        unique_chunks.append(cand['text'])
+                        
+                        # Gather facts
+                        for fact_list in cand['facts']:
+                            for fact in fact_list:
+                                if fact:
+                                    unique_facts.add(fact)
+                                    
+                        # Gather descriptions
+                        for desc in cand['descriptions']:
+                            if desc and not desc.endswith("No description available"):
+                                unique_descriptions.add(desc)
+                    
+                    if unique_chunks:
+                        context_parts.append("[GROUNDING CONTEXT]")
+                        context_parts.extend(unique_chunks[:5])
+                        context_parts.append("") 
+                        raw_chunks.extend(unique_chunks[:5])
+
+                    if unique_facts:
+                        context_parts.append("[GRAPH RELATIONSHIPS]")
+                        context_parts.extend(list(unique_facts)[:8])
+                        context_parts.append("") 
+                        raw_chunks.extend(list(unique_facts)[:8])
+                        
+                    if unique_descriptions:
+                        context_parts.append("[ENTITY DESCRIPTIONS]")
+                        context_parts.extend(list(unique_descriptions)[:4])
+                        context_parts.append("") 
+                        raw_chunks.extend(list(unique_descriptions)[:4])
+                    
+                else:
+                    print(f"❌ GraphRAG [PURE v1]: No entities matched query vector.")
+
+        except Exception as e:
+            print(f"⚠️ GraphRAG [PURE v1] Retrieval error: {e}")
+            
+        if not context_parts:
+            print(f"❌ GraphRAG [PURE v1]: No context found for query='{query}'")
+            return [] if as_list else ""
+            
+        if as_list:
+            return raw_chunks[:17]
+            
+        final_context = "\n".join(context_parts)
+        print(f"✅ GraphRAG [PURE v1]: Retrieved Context Content:\n{'-'*40}\n{final_context}\n{'-'*40}")
+        return final_context[:6000]
+
+    async def _flush_stop_frame(self, direction):
+        if self.saved_stop_frame:
+            print("🚦 GraphRAG [PURE v1]: Flushing buffered Stop Frame")
+            await self.push_frame(self.saved_stop_frame, direction)
+            self.saved_stop_frame = None
+
+    async def _flush_stop_frame_delayed(self, delay, direction):
+        await asyncio.sleep(delay)
+        if self.saved_stop_frame:
+             await self._flush_stop_frame(direction)
+
+    async def process_frame(self, frame: Frame, direction):
+        if isinstance(frame, StartFrame):
+            await super().process_frame(frame, direction)
+            await self.push_frame(frame, direction)
+            return
+
+        if isinstance(frame, InterimTranscriptionFrame):
+            await super().process_frame(frame, direction)
+            await self.push_frame(frame, direction)
+            return
+            
+        if isinstance(frame, UserStoppedSpeakingFrame):
+            self.saved_stop_frame = frame
+            asyncio.create_task(self._flush_stop_frame_delayed(0.5, direction))
+            return
+
+        if isinstance(frame, TranscriptionFrame):
+            user_text = frame.text
+            if user_text.strip():
+                context = await self.retrieve(user_text)
+                GraphRAGProcessor.LAST_QUERY = user_text
+                GraphRAGProcessor.LAST_CONTEXT = context
+                
+                enriched_prompt = f"[CONTEXT]\n{context}\n\n[QUESTION]\n{user_text}\n\nInstructions:\n1. Read the [CONTEXT] carefully.\n2. Find the exact answer to the [QUESTION] in the [CONTEXT].\n3. Provide a natural, conversational sentence as your answer.\n4. If the answer is not in the [CONTEXT], say: 'I'm sorry, I couldn't find that in the database.'\n"
+                frame.text = enriched_prompt
+            
+            await self.push_frame(frame, direction)
+            await self._flush_stop_frame(direction)
+            from pipecat.frames.frames import LLMRunFrame
+            await self.push_frame(LLMRunFrame(), direction)
+            return
+
+        if isinstance(frame, LLMContextFrame):
+            messages = frame.context.messages
+            user_messages = [msg for msg in messages if msg.get("role") == "user"]
+            
+            if user_messages:
+                latest_query = user_messages[-1].get("content", "")
+                if isinstance(latest_query, str) and latest_query.strip():
+                    context = await self.retrieve(latest_query)
+                    GraphRAGProcessor.LAST_QUERY = latest_query
+                    GraphRAGProcessor.LAST_CONTEXT = context
+                    
+                    enriched_prompt = f"[CONTEXT]\n{context}\n\n[QUESTION]\n{latest_query}\n\nInstructions:\n1. Read the [CONTEXT] carefully.\n2. Find the exact answer to the [QUESTION] in the [CONTEXT].\n3. Provide a natural, conversational sentence as your answer.\n4. If the answer is not in the [CONTEXT], say: 'I'm sorry, I couldn't find that in the database.'\n"
+                    user_messages[-1]["content"] = enriched_prompt
+            
+            await self.push_frame(frame, direction)
+            await self._flush_stop_frame(direction)
+            return
+
+        await super().process_frame(frame, direction)
+        await self.push_frame(frame, direction)
+
+class AnswerLoggerProcessor(FrameProcessor):
+    """Intercepts LLM streams to log the full Answer to file."""
+    def __init__(self):
+        super().__init__()
+        self.current_answer = ""
+
+    async def process_frame(self, frame, direction):
+        frame_type = type(frame).__name__
+        if "TextFrame" in frame_type:
+            self.current_answer += frame.text
+        elif frame_type in ["LLMFullResponseEndFrame", "TTSStoppedFrame", "UserStartedSpeakingFrame", "UserStoppedSpeakingFrame"]:
+            if self.current_answer.strip():
+                with open("graphrag_log.txt", "a", encoding="utf-8") as f:
+                    log_entry = (
+                        f"--- PURE GraphRAG Session ---\n"
+                        f"Retrieved Context:\n{GraphRAGProcessor.LAST_CONTEXT}\n\n"
+                        f"User Question:\n{GraphRAGProcessor.LAST_QUERY}\n\n"
+                        f"Final Answer:\n{self.current_answer}\n"
+                        f"{'-'*30}\n\n"
+                    )
+                    f.write(log_entry)
+                self.current_answer = ""
+                
+        await super().process_frame(frame, direction)
+        await self.push_frame(frame, direction)

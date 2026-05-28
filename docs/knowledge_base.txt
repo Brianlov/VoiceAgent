@@ -1,0 +1,7 @@
+
+This is a knowledge base for the Pipecat RAG integration.
+Pipecat is a framework for building voice agents.
+Stranger Things  is a Netflix series that have 5 seasons only.
+The most fun season in stranger things is season 4 which brian said that.
+Who is Brian?A student that studing computer engineering.
+

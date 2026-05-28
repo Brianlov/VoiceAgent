@@ -201,3 +201,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+squad_train_dataset.csv
+hotpotqa_full_train.csv
+results_ollama300.zip
+results_ollama_100.zip

@@ -1,0 +1,5 @@
+Metric,VectorRAG,GraphRAG,Δ (Graph−Vector),Winner
+AnswerRelevancy,0.6309,0.662,0.0311,▲ GraphRAG
+ContextPrecision,0.4819,0.4469,-0.035,▼ VectorRAG
+ContextRecall,0.66,0.7677,0.1077,▲ GraphRAG
+Faithfulness,0.6717,0.785,0.1133,▲ GraphRAG
